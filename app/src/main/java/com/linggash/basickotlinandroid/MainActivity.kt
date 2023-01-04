@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         initComponent()
 
-        // resource practice
+        // get resource practice
         sayHelloTextView.text = resources.getString(R.string.app_name)
 
         // action listener practice
@@ -40,7 +40,11 @@ class MainActivity : AppCompatActivity() {
             Log.e("LSH", "This is error log")
 
             val name = nameEditText.text.toString()
-            sayHelloTextView.text = "Hi $name"
+            sayHelloTextView.text = resources.getString(R.string.sayHelloTextView, name)
+
+            resources.getStringArray(R.array.names).forEach {
+                Log.i("LSH", it)
+            }
         }
     }
 }
