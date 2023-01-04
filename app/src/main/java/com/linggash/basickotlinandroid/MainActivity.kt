@@ -39,6 +39,13 @@ class MainActivity : AppCompatActivity() {
             Log.w("LSH", "This is warn log")
             Log.e("LSH", "This is error log")
 
+            Log.i("Value Resource", resources.getInteger(R.integer.maxPage).toString())
+            Log.i("Value Resource", resources.getBoolean(R.bool.isProductionMode).toString())
+            Log.i("Value Resource", resources.getIntArray(R.array.numbers).joinToString(","))
+            Log.i("Value Resource", resources.getColor(R.color.background, theme).toString())
+
+            sayHelloButton.setBackgroundColor(resources.getColor(R.color.background, theme))
+
             val name = nameEditText.text.toString()
             sayHelloTextView.text = resources.getString(R.string.sayHelloTextView, name)
 
