@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Android Kotlin Dasar</string>
+    <string name="nameEditText">Name :</string>
+    <string name="sayHelloButton">Ucapkan Halo</string>
+    <string name="sayHelloTextView">Halo %1$s</string>
+    <string-array name="names">
+        <item>Lingga</item>
+        <item>Sempana</item>
+        <item>Hidayat</item>
+    </string-array>
+</resources>
