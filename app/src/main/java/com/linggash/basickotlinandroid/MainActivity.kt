@@ -33,6 +33,12 @@ class MainActivity : AppCompatActivity() {
         // action listener practice
         sayHelloButton.setOnClickListener {
 
+            val json = assets.open("sample.json")
+                .bufferedReader()
+                .use { it.readText() }
+
+            Log.i("ASSET", json)
+
 //            resources.getDrawable(R.drawable.mamike, theme)
 
             //log practice
