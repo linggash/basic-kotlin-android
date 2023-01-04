@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         // action listener practice
         sayHelloButton.setOnClickListener {
 
+//            resources.getDrawable(R.drawable.mamike, theme)
+
             //log practice
             Log.d("LSH", "This is debug log")
             Log.i("LSH", "This is info log")
