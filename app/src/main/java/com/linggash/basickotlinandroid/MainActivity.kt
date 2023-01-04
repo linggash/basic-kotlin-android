@@ -9,6 +9,7 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
+    // lateinit practice
     private lateinit var nameEditText: EditText
     private lateinit var sayHelloButton: Button
     private lateinit var sayHelloTextView: TextView
@@ -26,10 +27,13 @@ class MainActivity : AppCompatActivity() {
 
         initComponent()
 
-        sayHelloTextView.text = "hi"
+        // resource practice
+        sayHelloTextView.text = resources.getString(R.string.app_name)
 
+        // action listener practice
         sayHelloButton.setOnClickListener {
 
+            //log practice
             Log.d("LSH", "This is debug log")
             Log.i("LSH", "This is info log")
             Log.w("LSH", "This is warn log")
