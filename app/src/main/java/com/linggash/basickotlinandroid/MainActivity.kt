@@ -33,6 +33,12 @@ class MainActivity : AppCompatActivity() {
         // action listener practice
         sayHelloButton.setOnClickListener {
 
+            val sample = resources.openRawResource(R.raw.sample)
+                .bufferedReader()
+                .use { it.readText() }
+            Log.i("RAW", sample)
+
+//            asset manager
             val json = assets.open("sample.json")
                 .bufferedReader()
                 .use { it.readText() }
