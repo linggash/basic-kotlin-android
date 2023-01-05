@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.linggash.basickotlinandroid">
 
+    <uses-feature android:name="android.hardware.fingerprint" android:required="true"/>
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
