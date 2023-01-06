@@ -41,6 +41,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+//    debugging practice
+    private fun printHello(name: String){
+        Log.i("DEBUG", name)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hello_world)
@@ -50,14 +56,18 @@ class MainActivity : AppCompatActivity() {
         // get resource practice
         sayHelloTextView.text = resources.getString(R.string.app_name)
 
-//        device feature practice
-        checkFingerprint()
-
-//        platform service practice
-        checkPlatformVersion()
-
         // action listener practice
         sayHelloButton.setOnClickListener {
+
+            val nama = "Lingga"
+//            debugging practice
+            printHello(nama)
+
+//            device feature practice
+            checkFingerprint()
+
+//            platform service practice
+            checkPlatformVersion()
 
             val sample = resources.openRawResource(R.raw.sample)
                 .bufferedReader()
