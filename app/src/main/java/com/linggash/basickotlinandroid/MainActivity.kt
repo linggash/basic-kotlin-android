@@ -1,5 +1,7 @@
 package com.linggash.basickotlinandroid
 
+import android.content.pm.PackageManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -21,6 +23,24 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+//    device feature practice
+    private fun checkFingerprint(){
+        if(packageManager.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)){
+            Log.i("FEATURE", "Fingerprint feature is available")
+        }else{
+            Log.w("FEATURE", "Fingerprint feature is not available")
+        }
+    }
+
+//    platform service practice
+    private fun checkPlatformVersion(){
+        Log.i("SDK", Build.VERSION.SDK_INT.toString())
+        if(Build.VERSION.SDK_INT < Build.VERSION_CODES.S){
+            Log.i("SDK", "Disabled feature, because version sdk is lower than 31")
+
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hello_world)
@@ -29,6 +49,12 @@ class MainActivity : AppCompatActivity() {
 
         // get resource practice
         sayHelloTextView.text = resources.getString(R.string.app_name)
+
+//        device feature practice
+        checkFingerprint()
+
+//        platform service practice
+        checkPlatformVersion()
 
         // action listener practice
         sayHelloButton.setOnClickListener {
