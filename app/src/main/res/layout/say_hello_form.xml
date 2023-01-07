@@ -20,4 +20,8 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/sayHelloButton"
         android:textColor="@color/say_hello"/>
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="200dp"/>
 </merge>
